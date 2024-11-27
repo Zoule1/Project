@@ -1,0 +1,218 @@
+  /* General page styling */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f9;
+    color: #333;
+}
+
+h1, h2 {
+    color: #022F40;
+    margin: 10px 0;
+}
+
+/* Navbar styling */
+nav {
+    display: flex;
+    align-items: center;
+    background:  linear-gradient(135deg, #6e7dff, #55c7ff);
+    padding: 15px;
+    color: white;
+    margin-left: 220px;
+}
+
+nav .logo img {
+    height: 100px;
+    margin-right: 20px;
+}
+
+nav .dept h1 {
+    font-size: 1.8em;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 220px;
+    background:  linear-gradient(135deg, #6e7dff, #55c7ff);
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #022F40;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #B8B8F3;
+    color: #2F284E;
+}
+
+/* Admin container styling */
+.admin-container {
+    display: flex;
+    margin-left: 240px;
+    padding: 20px;
+    background-color: #ecf0f1;
+    min-height: 100vh;
+}
+
+.info-field {
+    flex-grow: 1;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-field h2 {
+    color: #2980b9;
+    margin-bottom: 20px;
+}
+
+/* Resume Style */
+.resume {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 60%;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+}
+
+.resume-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.resume-header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.resume-header h2 {
+    color: #2980b9;
+    margin: 0;
+}
+
+.resume-header h3 {
+    color: #34495e;
+    margin: 5px 0;
+}
+
+.resume-section {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.resume-section h3 {
+    color: #00A36C;
+}
+
+.resume-section p {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+/* Chatroom Styling */
+#room__container {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#members__container, #stream__container, #messages__container {
+    flex: 1;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#members__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#messages {
+    border: 1px solid #ddd;
+    padding: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+}
+
+#message__form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#message__form input:focus {
+    outline: none;
+    border-color: #00A36C;
+}
+
+.stream__actions button {
+    background-color: #00A36C;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.stream__actions button:hover {
+    background-color: #1abc9c;
+}
+
+/* Message Styling */
+.message {
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f1f1f1;
+}
+
+.message.user {
+    background-color: #e0f7fa;
+}
+
+.message.participant {
+    background-color: #f9fbe7;
+}
+</style>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Room</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+ /* General resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body and layout */
+body {
+    background-color: #f0f4f8; /* Light gray background for softness */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Header */
+#nav {
+    width: 100%;
+    background: linear-gradient(135deg, #6e7dff, #55c7ff); /* Beautiful gradient */
+    padding: 15px 0;
+    position: centre; /* Make the navbar fixed at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+.nav--list {
+    text-align: center; /* Center-aligns text inside the nav container */
+}
+
+
+#nav #logo span {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Main content below the nav */
+#room__lobby__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 420px;
+    margin-top: 100px; /* Give space for the fixed navbar */
+    background: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Form container */
+#form__container__header p {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Form fields */
+.form__field__wrapper {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form__field__wrapper label {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 6px;
+    display: block;
+    font-weight: 500;
+}
+
+.form__field__wrapper input {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f7f9fc;
+    color: #333;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form__field__wrapper input:focus {
+    border-color: #6e7dff;
+    box-shadow: 0 0 8px rgba(110, 125, 255, 0.4);
+}
+
+/* Submit button */
+button {
+    width: 100%;
+    background-color: #6e7dff;
+    color: white;
+    font-size: 1.2rem;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button svg {
+    margin-left: 10px;
+    fill: white;
+}
+
+button:hover {
+    background-color: #5a6eff;
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #4a5fdf;
+    transform: translateY(1px);
+}
+
+/* Footer */
+#footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    #room__lobby__container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .form__field__wrapper input {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 1.1rem;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <header id="nav">
+       <div class="nav--list">
+            <a href="lobby.html"/>
+                <h3 id="logo">
+                    <span>UPTM Mentorship</span>
+                </h3>
+            </a>
+       </div>
+
+    </header>
+
+    <main id="room__lobby__container">
+        
+        <div id="form__container">
+             <div id="form__container__header">
+                 <p>Join Room</p>
+             </div>
+ 
+ 
+            <form id="lobby__form">
+ 
+                 <div class="form__field__wrapper">
+                     <label>Your Name</label>
+                     <input type="text" name="name" required placeholder="Enter your display name..." />
+                 </div>
+ 
+                 <div class="form__field__wrapper">
+                     <label>Room Name</label>
+                     <input type="text" name="room" value="mentorship" readonly />
+                 </div>
+ 
+                 <div class="form__field__wrapper">
+                     <button type="submit">Go to Room 
+                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/></svg>
+                    </button>
+                 </div>
+            </form>
+        </div>
+     </main>
+    
+</body>
+<script type="text/javascript" src="js/lobby.js"></script>
+</html>
